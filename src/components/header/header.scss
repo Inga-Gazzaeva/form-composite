@@ -12,11 +12,22 @@ header
 	gap: 10px;
 	align-items: end;
 }
+.header__burger.active .header__burger-line
+{
+	width: 40px;
+	transform:translate(0px-7px) rotate(45deg);
+}
+.header__burger.active .header__burger-line--small
+{
+	transform:translate(-1px-4px) rotate(-45deg);
+}
+
 .header__burger-line
 {
 	width: 40px;
 	height: 2px;
 	background: white;
+	transition: 0.3;
 }
 .header__burger-line--small
 {
