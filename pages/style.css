@@ -43,7 +43,6 @@ li {
   width: 100%;
   padding: 0 20px;
   margin: 0 auto;
-  display: flex;
 }
 
 .container-flex {
@@ -59,41 +58,49 @@ header {
   padding-bottom: 12px;
 }
 
-.header__burger {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: end;
-}
-
-.header__burger.active .header__burger-line {
-  width: 40px;
-  transform: translate(-7px) rotate(45deg);
-}
-
-.header__burger.active .header__burger-line--small {
-  transform: translate(-5px) rotate(-45deg);
-}
-
 .header__burger-line {
   width: 40px;
   height: 2px;
   background: white;
-  transition: 0.3;
+  transition: all 0.3s;
 }
 
 .header__burger-line--small {
   width: 30px;
 }
 
+.header__burger {
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__burger.active .header__burger-line {
+  width: 40px;
+  transform: translate(0px, 7px) rotate(45deg);
+}
+
+.header__burger.active .header__burger-line--small {
+  transform: translate(-1px, -4px) rotate(-45deg);
+}
+
 .header__wrap {
-  background: rgba(34, 37, 37, 0.9);
+  background: rgb(27, 30, 30);
   position: absolute;
   left: 0;
   top: 55px;
-  padding-bottom: 30px;
   padding-top: 20px;
+  padding-bottom: 30px;
   width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.header__wrap.active {
+  visibility: visible;
+  opacity: 1;
 }
 
 .header__list {
@@ -121,21 +128,21 @@ header {
 
 .header__phone a {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 22px;
   color: rgb(255, 255, 255);
 }
 
 .header__phone a:last-child {
   color: rgb(234, 234, 234);
-  font: 15px;
+  font-size: 15px;
   line-height: 16.5px;
 }
 
 .header__btn {
   background: linear-gradient(270deg, #25B7BC 0%, #007FA1 100%);
   border-radius: 106px;
-  width: 100px;
+  width: 100%;
   font-size: 14px;
   font-weight: 600;
   line-height: 50px;

@@ -5,8 +5,9 @@ window.onload=function()
 };
 let mainObj = 
 {
+	
 	init()
 	{
-		
+		show()
 	}
 };

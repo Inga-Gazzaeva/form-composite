@@ -5,42 +5,54 @@ header
 	padding-top: 12px;
 	padding-bottom: 12px;
 }
-.header__burger
-{
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
-	align-items: end;
-}
-.header__burger.active .header__burger-line
-{
-	width: 40px;
-	transform:translate(0px-7px) rotate(45deg);
-}
-.header__burger.active .header__burger-line--small
-{
-	transform:translate(-1px-4px) rotate(-45deg);
-}
-
 .header__burger-line
 {
 	width: 40px;
 	height: 2px;
 	background: white;
-	transition: 0.3;
+	transition: all 0.3s;
+}
+.phone-tab
+{
+	display: none;
 }
 .header__burger-line--small
 {
 	width: 30px;
 }
+.header__burger
+{
+	display: flex;
+	align-items: end;
+	flex-direction: column;
+	gap: 10px;
+}
+.header__burger.active .header__burger-line
+{
+	width: 40px;
+	transform: translate(0px, 7px) rotate(45deg);
+}
+.header__burger.active .header__burger-line--small
+{
+	transform: translate(-1px, -4px) rotate(-45deg);	
+}
 .header__wrap
 {
-	background: rgba(34, 37, 37, 0.9);
+	background: rgba(27, 30, 30, 1);
 	position: absolute;
 	left: 0;
 	top: 55px;
+	padding-top: 20px;
 	padding-bottom: 30px;
-	padding-top: 20px;width: 100%;
+	width: 100%;
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.3s;
+}
+.header__wrap.active
+{
+	visibility: visible;
+	opacity: 1;
 }
 .header__list
 {
@@ -68,24 +80,59 @@ header
 .header__phone a
 {
 	font-size: 20px;
-	font-weight: 600;
+	font-weight: 400;
 	line-height: 22px;
 	color: rgba(255, 255, 255, 1);
 }
 .header__phone a:last-child
 {
-  color: rgba(234, 234, 234, 1);
-  font: 15px;
-  line-height: 16.5px;
+	color: rgba(234, 234, 234, 1);
+	font-size: 15px;
+	line-height: 16.5px;
 }
 .header__btn
 {
 	background: linear-gradient(270deg, #25B7BC 0%, #007FA1 100%);
 	border-radius: 106px;
-	width: 100px;
+	width: 100%;
 	font-size: 14px;
 	font-weight: 600;
 	line-height: 50px;
 	color: rgba(255, 255, 255, 1);
 	height: 50px;
+}
+
+@media(min-width:1024)
+}
+	header
+	{
+		padding: 20px 0;	
+	}
+	header svg
+	{
+		width: 211px;
+		height: 50px;		
+	}
+	.header__link-wrap
+	{
+		display: flex;
+		align-items: center;
+		gap: 77px;
+	}
+	.phone-tab
+	{
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+	.phone-tab svg
+	{
+		width: 14px;
+		height: 14px;
+	}
+	.header__wrap
+	{
+		top: 94px;		
+	}
+
 }
