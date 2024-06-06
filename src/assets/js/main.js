@@ -1,13 +1,12 @@
 "use strict"
-window.onload=function()
+window.onload = function()
 {
-	mainObj.init();
-};
-let mainObj = 
+	mainObj.inition()
+}
+let mainObj =
 {
-	
-	init()
+	inition()
 	{
-		show()
+		
 	}
-};
+}
